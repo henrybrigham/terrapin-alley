@@ -10,18 +10,18 @@ const path = require('path');
 
 function assetsPath(_path) {
   return path.posix.join(_path);
-};
+}
 
 module.exports = {
   devtool: 'inline-source-map',
   entry: [
-		'./src/index.js'
+    './src/index.js'
   ],
 
   // Production details
   output: {
     // When compiled for production, output file location
-		path: __dirname + '/dist',
+    path: `${__dirname}/dist`,
     publicPath: '/',
     filename: 'bundle.js' // Its convention to use this name
   },
@@ -34,17 +34,17 @@ module.exports = {
 
   module: {
     loaders: [
-			{
+      {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
-			},
-			{
+        use: ['style-loader', 'css-loader']
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: assetsPath('img/[name].[hash:7].[ext]'),
-        },
+          name: assetsPath('img/[name].[hash:7].[ext]')
+        }
       },
       {
         test: /\.js[x]?$/,
@@ -52,10 +52,10 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-1']
-        },
+        }
       },
-        // I am using SASS as Transpiler for style sheets
-      {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]},
+      // I am using SASS as Transpiler for style sheets
+      { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'] }
 
     ]
   },
