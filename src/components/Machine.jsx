@@ -5,7 +5,7 @@ const propTypes = {
 
 };
 
-class Exchange extends React.Component {
+class Machine extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -27,5 +27,5 @@ class Exchange extends React.Component {
   }
 }
 
-Exchange.propTypes = propTypes;
-export default Exchange;
+Machine.propTypes = propTypes;
+export default Machine;
