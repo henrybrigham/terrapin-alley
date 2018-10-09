@@ -43,7 +43,6 @@ module.exports = {
 		'no-return-assign': ['error', 'except-parens'],
 		'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
 		"space-before-function-paren": ["error", "never"],
-		"linebreak-style": ["error", "unix"],
 		
 		// React
 		'react/jsx-first-prop-new-line': ['error', 'never'],
