@@ -1,3 +1,6 @@
+import Matter from 'matter';
+import MatterAttractors from 'matter-attractors';
+
 (() => {
   // plugins
   Matter.use(MatterAttractors);
@@ -358,16 +361,6 @@
   // matter.js has a built in random range function, but it is deterministic
   function rand(min, max) {
     return Math.random() * (max - min) + min;
-  }
-
-  // outer edges of pinball table
-  function boundary(x, y, width, height) {
-    return Matter.Bodies.rectangle(x, y, width, height, {
-      isStatic: true,
-      render: {
-        fillStyle: COLOR.OUTER
-      }
-    });
   }
 
   // wall segments

@@ -35,7 +35,6 @@ module.exports = {
 		// Custom rules
 		'no-tabs': 0,
 		'comma-dangle': ['error', 'never'],
-		'space-before-fu`n`ction-paren': ['error', 'never'],
 		'function-paren-newline': ['error', 'consistent'],
 		"no-mixed-spaces-and-tabs": [2, "smart-tabs"],
 		'no-param-reassign': 0,

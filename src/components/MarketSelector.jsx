@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import Select from 'react-select';
 
 const propTypes = {
-	selectedMarket: PropTypes.object.isRequired,
-	onSelect: PropTypes.func.isRequired
+  selectedMarket: PropTypes.object.isRequired,
+  onSelect: PropTypes.func.isRequired
 };
 
 const options = [
@@ -15,18 +15,16 @@ const options = [
 
 class MarketSelector extends React.PureComponent {
   handleChange = (selectedOption) => {
-		this.props.onSelect(selectedOption)
-	}
-	
+    this.props.onSelect(selectedOption);
+  }
+
   render() {
     const { selectedMarket } = this.props;
     return (
-			<Select
-				className='marketSelector'
-        value={selectedMarket}
-        onChange={this.handleChange}
-				options={options}
-      />
+      <Select className="marketSelector"
+        value={ selectedMarket }
+        onChange={ this.handleChange }
+        options={ options } />
     );
   }
 }
