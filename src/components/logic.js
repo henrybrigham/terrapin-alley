@@ -363,32 +363,9 @@ import MatterAttractors from 'matter-attractors';
     return Math.random() * (max - min) + min;
   }
 
-  // wall segments
-  function wall(x, y, width, height, color, angle = 0) {
-    return Matter.Bodies.rectangle(x, y, width, height, {
-      angle,
-      isStatic: true,
-      chamfer: { radius: 10 },
-      render: {
-        fillStyle: color
-      }
-    });
-  }
 
-  // bodies created from SVG paths
-  function path(x, y, path) {
-    const vertices = Matter.Vertices.fromPath(path);
-    return Matter.Bodies.fromVertices(x, y, vertices, {
-      isStatic: true,
-      render: {
-        fillStyle: COLOR.OUTER,
 
-        // add stroke and line width to fill in slight gaps between fragments
-        strokeStyle: COLOR.OUTER,
-        lineWidth: 1
-      }
-    });
-  }
+  
 
   // round bodies that repel pinball
   function bumper(x, y) {
