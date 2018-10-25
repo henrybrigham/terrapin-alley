@@ -35,7 +35,6 @@ module.exports = {
 		// Custom rules
 		'no-tabs': 0,
 		'comma-dangle': ['error', 'never'],
-		'space-before-fu`n`ction-paren': ['error', 'never'],
 		'function-paren-newline': ['error', 'consistent'],
 		"no-mixed-spaces-and-tabs": [2, "smart-tabs"],
 		'no-param-reassign': 0,
@@ -43,7 +42,6 @@ module.exports = {
 		'no-return-assign': ['error', 'except-parens'],
 		'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
 		"space-before-function-paren": ["error", "never"],
-		"linebreak-style": ["error", "unix"],
 		
 		// React
 		'react/jsx-first-prop-new-line': ['error', 'never'],
